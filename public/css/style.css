@@ -16,8 +16,10 @@ body {
     ". container container container container . "
     "footer footer footer footer footer footer"; */
 
-    background: rgb(255, 215, 215);
-    background: radial-gradient(circle, rgba(255, 215, 215, 1) 0%, rgba(255, 112, 112, 1) 53%, rgba(255, 139, 139, 1) 100%);
+    background-image: url("/img/bg1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding:40px;
 
 }
 
@@ -33,15 +35,24 @@ a:hover {
 }
 
 .createbutton{
-    height:150px;
+    height:60px;
     width:150px;
-    border-radius:50%;
+    border-radius:10px;
     border:solid 5px orange;
+    border-width:0px 3px 9px 3px;
     text-align: center;
     vertical-align: middle;
     background: white;
     margin:0 auto;
-    padding-top:65px;
+    font-size:1.3em;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.createbutton:hover{
+    zoom:1.2;
+    background:orange;
+    color:white;
+    text-decoration:none;
 }
 
 
@@ -107,6 +118,32 @@ a:hover {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.15);
+    max-width:200px;
+    width:200px;
+    overflow: hidden;
+    object-fit: cover;
+    text-align: center;
+    border-bottom: solid 8px rgb(251, 87, 37);
+    transition:0.3s;
+}
+
+.pokemonbox:hover{
+    width:270px;
+    max-width:270px;
+}
+
+.pokemonimage{
+    object-fit: cover;
+}
+
+.newpokemonformcontainer{
+    text-align: center;
+}
+
+input{
+    margin-bottom:15px;
+    border-radius:10px;
+    height:30px;
 }
 
 header {
@@ -137,7 +174,7 @@ header #create-btn {
 
 .siteBranding {
     padding: 20px;
-    font-size: 50px;
+    font-size: 4em;
     font-weight: 600;
     text-align:center;
     display:block;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include(`./partials/header.ejs`) %>
+<%- include(`./partials/logosection`) %>
+
+            <div id="title">
+                <%=pokemon.name%>
+            </div>
+            <div class="navFlex">
+                <form action="/index/<%=index%>?_method=DELETE" method="POST">
+                    <input id="delete-btn" type="submit" value="DELETE">
+                </form>
+                <form action="/index/<%=index%>/edit">
+                    <input id="edit-btn" type="submit" value="EDIT">
+            </div>
+        </header>
+
+        <div class="container">
+            <div id="showImg"> <img src="<%=pokemon.img%>"></div>
+
+        </div>
+
+
+    </body>
+
+</html>

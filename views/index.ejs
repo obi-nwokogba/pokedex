@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include(`./partials/header.ejs`) %>
+<%- include(`./partials/logosection`) %>
+   
+            <a href="/index/create">
+                <div class="createbutton">Create<br>new pokemon</div>
+            </a>
+
+        </header>
+        </div>
+        <div class="container">
+            <% pokemons.forEach(function(monster) { %>
+                <% let id=pokemons.indexOf(monster) %>
+                    <div class="pokemonbox">
+                        <div id="monsterName">
+                            <a href="/index/<%=id%>">
+                                <%=monster.name%>
+                            </a>
+                        </div>
+                        <div id="monsterImg">
+                            <img src="<%=monster.img%>">
+                        </div>
+                    </div>
+                    <% })%>
+        </div>
+    </body>
+
+</html>
